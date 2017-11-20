@@ -19,7 +19,6 @@ class Todo(db.Model):
     done = db.Column(db.Boolean(), default=False)
     # timestamps
     created_at = db.Column(
-        db.TIMESTAMP, default=datetime.utcnow, nullable=False)
+        db.TIMESTAMP, default=datetime.utcnow, nullable=True)
     updated_at = db.Column(db.TIMESTAMP, default=datetime.utcnow,
-                           onupdate=datetime.utcnow, nullable=False)
-
+                           onupdate=datetime.utcnow, nullable=True)

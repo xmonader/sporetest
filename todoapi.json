@@ -18,6 +18,29 @@
             ],
             "path" : "/todos/:id",
             "method" : "GET"
+         },
+         "create_todo" : {
+            "required_payload" : [
+                "title", "done"
+            ],
+            "expected_status" : [
+                ["201", "200"]
+            ],
+            "path" : "/todos",
+            "method" : "POST"
+         },
+         "update_todo" : {
+            "required_params" : [
+                "id"
+            ],
+            "required_payload": [
+                "title", "done"
+            ],
+            "expected_status" : [
+                "200", "201"
+            ],
+            "path" : "/todos/:id",
+            "method" : "PATCH"
          }
     },
 
